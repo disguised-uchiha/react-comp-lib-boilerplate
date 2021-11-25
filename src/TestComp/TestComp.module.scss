@@ -1,0 +1,6 @@
+@import "globals";
+
+.test {
+  @apply bg-red-600 text-white;
+  @apply p-4;
+}
