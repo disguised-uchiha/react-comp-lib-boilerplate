@@ -1,0 +1,26 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+no_color='\033[0m'
+# npm test
+
+echo "${yellow} 🐶 Styling, Verifying your project before committing${no_color}"
+
+# Check tsconfig standards
+npm run check-type ||
+(
+    echo "${red}❌ Failed Type check.❌${no_color}"
+    false;
+)
+
+npx lint-staged ||
+(
+        echo "${red}ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.${no_color}"
+        false; 
+)
+
+# # If everything passes... Now we can commit
+echo "${green}✅ Successfully committed.${no_color}"
