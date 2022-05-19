@@ -2,13 +2,6 @@
 
 `npm run generate component-name` run this command for generating a component with all the required files
 
----
-
-**NOTE**
-Taiwind only works with `@apply` directive.
-
----
-
 ## How to run the package locally without publishing?
 
 Download the project
