@@ -1,15 +1,12 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
-
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const autoprefixer = require("autoprefixer");
-const tailwindcss = require("tailwindcss");
 
 const isProduction = process.env.NODE_ENV === "production";
 
-const config = {
+const config: import("webpack").Configuration = {
   entry: "./src/index.ts",
   output: {
     path: path.resolve(__dirname, "build"),
