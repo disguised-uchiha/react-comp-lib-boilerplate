@@ -1,7 +1,10 @@
+const designSystem = require("./design-system/tailwind-design-system");
+
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
-  darkMode: false, // or 'media' or 'class'
-  theme: {},
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: { ...designSystem }
+  },
   variants: {
     extend: {}
   },

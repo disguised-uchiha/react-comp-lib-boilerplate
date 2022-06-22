@@ -1,0 +1,96 @@
+/* stylelint-disable no-descending-specificity */
+@import "globals";
+
+.container {
+  :global {
+    .ant-btn-primary,
+    .ant-btn-primary:hover,
+    .ant-btn-primary:focus,
+    .ant-btn-primary:active {
+      border: none;
+    }
+
+    .ant-btn[disabled],
+    .ant-btn[disabled]:hover,
+    .ant-btn[disabled]:focus,
+    .ant-btn[disabled]:active {
+      @apply bg-border-divider-s3;
+      @apply border-border-divider-s3;
+      @apply text-text-shade-s3;
+    }
+  }
+}
+
+.primary {
+  :global {
+    .ant-btn {
+      @apply h-auto w-auto;
+      @apply rounded-md;
+      @apply text-text-shade-s4;
+      @apply bg-primary;
+    }
+
+    .ant-btn:focus,
+    .ant-btn:active {
+      @apply bg-primary-tbd-7;
+    }
+
+    .ant-btn:hover {
+      @apply bg-primary-tbl-7;
+    }
+  }
+}
+
+.secondary {
+  :global {
+    .ant-btn {
+      @apply h-auto w-auto;
+      @apply rounded-md;
+      @apply text-text-shade-s4;
+      @apply bg-secondary;
+    }
+
+    .ant-btn:focus,
+    .ant-btn:active {
+      @apply bg-secondary-opd-7;
+    }
+
+    .ant-btn:hover {
+      @apply bg-secondary-opl-7;
+    }
+  }
+}
+
+.tertiary {
+  :global {
+    .ant-btn {
+      @apply h-auto w-auto;
+      @apply rounded-md;
+      @apply text-text-shade-s4;
+      @apply bg-tertiary;
+    }
+
+    .ant-btn:focus,
+    .ant-btn:active {
+      @apply bg-tertiary-frd-7;
+    }
+
+    .ant-btn:hover {
+      @apply bg-tertiary-frl-7;
+    }
+  }
+}
+
+.buttonIcon {
+  @apply text-H6 text-text-shade-s4;
+
+  line-height: 0;
+}
+
+.iconButton {
+  @apply p-8;
+  @apply text-H6;
+  @apply rounded-md;
+  @apply flex-row-reverse;
+  @apply flex items-center gap-2;
+}

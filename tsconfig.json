@@ -3,7 +3,7 @@
     "baseUrl": "./",
     "declaration": true,
     "declarationDir": "build",
-    "module": "esnext",
+    "module": "es6",
     "allowJs": true,
     "skipLibCheck": true,
     "target": "es5",
@@ -19,6 +19,7 @@
       "@root/*": ["./*"]
     }
   },
+  "files": ["src/index.ts"],
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "storybook-static", "util"]
+  "exclude": ["node_modules", "build", "storybook-static", "scripts", "src/**/*.stories.tsx", "src/**/*.test.tsx"]
 }
